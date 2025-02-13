@@ -14,10 +14,10 @@ targets:
             npm:
                 token: $npm_token
         codeSamples:
-            style: readme
-            langOverride: javascript
             registry:
                 location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api-typescript-code-samples
+            style: readme
+            langOverride: javascript
             labelOverride:
                 fixedValue: Typescript (SDK)
             blocking: false

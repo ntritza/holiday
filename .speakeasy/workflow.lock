@@ -13,7 +13,7 @@ targets:
         sourceRevisionDigest: sha256:6673a3a5fecde9677c7d91366ef05fc3f96bf31aff9f07900276c590c9ec2322
         sourceBlobDigest: sha256:b269394a48aa239da1334c1dd53707b44627a018a66405c8426d922f055e4f43
         codeSamplesNamespace: holiday-destinations-api-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:fb86bc42db801e9f969edc9b4a46f45a1aa8abd23d519e16cf762a6534438712
+        codeSamplesRevisionDigest: sha256:ca578be45a6dbea3bf707bc6965836e10beab35e59377d4c03f7740454121f71
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -33,6 +33,8 @@ workflow:
             codeSamples:
                 registry:
                     location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api-typescript-code-samples
+                style: readme
+                langOverride: javascript
                 labelOverride:
                     fixedValue: Typescript (SDK)
                 blocking: false
