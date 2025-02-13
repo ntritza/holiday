@@ -110,7 +110,7 @@ run();
 ### [destinations](docs/sdks/destinations/README.md)
 
 * [getDestinations](docs/sdks/destinations/README.md#getdestinations) - Get Destinations
-* [createDestination](docs/sdks/destinations/README.md#createdestination) - Create Destination
+* [createDestination](docs/sdks/destinations/README.md#createdestination) - Create a Destination
 * [deleteDestinationDestinationsDestinationIdDelete](docs/sdks/destinations/README.md#deletedestinationdestinationsdestinationiddelete) - Delete Destination
 * [getDestinationByIdDestinationsDestinationIdGet](docs/sdks/destinations/README.md#getdestinationbyiddestinationsdestinationidget) - Get Destination By Id
 * [updateDestinationDestinationsDestinationIdPut](docs/sdks/destinations/README.md#updatedestinationdestinationsdestinationidput) - Update Destination
@@ -138,7 +138,7 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 
 <summary>Available standalone functions</summary>
 
-- [`destinationsCreateDestination`](docs/sdks/destinations/README.md#createdestination) - Create Destination
+- [`destinationsCreateDestination`](docs/sdks/destinations/README.md#createdestination) - Create a Destination
 - [`destinationsDeleteDestinationDestinationsDestinationIdDelete`](docs/sdks/destinations/README.md#deletedestinationdestinationsdestinationiddelete) - Delete Destination
 - [`destinationsGetDestinationByIdDestinationsDestinationIdGet`](docs/sdks/destinations/README.md#getdestinationbyiddestinationsdestinationidget) - Get Destination By Id
 - [`destinationsGetDestinations`](docs/sdks/destinations/README.md#getdestinations) - Get Destinations

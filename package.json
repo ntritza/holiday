@@ -1,6 +1,6 @@
 {
   "name": "holiday-test-sdk",
-  "version": "0.2.3",
+  "version": "1.2.3",
   "author": "Speakeasy",
   "main": "./index.js",
   "sideEffects": false,

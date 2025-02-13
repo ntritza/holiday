@@ -8,7 +8,7 @@ Endpoints for managing holiday destinations
 ### Available Operations
 
 * [getDestinations](#getdestinations) - Get Destinations
-* [createDestination](#createdestination) - Create Destination
+* [createDestination](#createdestination) - Create a Destination
 * [deleteDestinationDestinationsDestinationIdDelete](#deletedestinationdestinationsdestinationiddelete) - Delete Destination
 * [getDestinationByIdDestinationsDestinationIdGet](#getdestinationbyiddestinationsdestinationidget) - Get Destination By Id
 * [updateDestinationDestinationsDestinationIdPut](#updatedestinationdestinationsdestinationidput) - Update Destination

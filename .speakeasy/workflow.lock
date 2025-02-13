@@ -2,8 +2,8 @@ speakeasyVersion: 1.490.0
 sources:
     Holiday Destinations API:
         sourceNamespace: holiday-destinations-api2
-        sourceRevisionDigest: sha256:24c881234550b58f44149e9ed8806a3fec9ef4f4c9cce1bed9703b6ff8313485
-        sourceBlobDigest: sha256:e5920878dd4a5fe3bfc88d38daa3fe93735ae9f822e57dd7dbafe92a57fb6223
+        sourceRevisionDigest: sha256:a9d0ffa9a567c9f7a14cdbe653b7ded62f68f52687c631347121c7f282cae8c5
+        sourceBlobDigest: sha256:0fd38976b131264fd24a886a406638a49d46ea44216e90dd6d6a263008232c8c
         tags:
             - latest
             - 1.2.0
@@ -11,10 +11,10 @@ targets:
     holiday:
         source: Holiday Destinations API
         sourceNamespace: holiday-destinations-api2
-        sourceRevisionDigest: sha256:24c881234550b58f44149e9ed8806a3fec9ef4f4c9cce1bed9703b6ff8313485
-        sourceBlobDigest: sha256:e5920878dd4a5fe3bfc88d38daa3fe93735ae9f822e57dd7dbafe92a57fb6223
+        sourceRevisionDigest: sha256:a9d0ffa9a567c9f7a14cdbe653b7ded62f68f52687c631347121c7f282cae8c5
+        sourceBlobDigest: sha256:0fd38976b131264fd24a886a406638a49d46ea44216e90dd6d6a263008232c8c
         codeSamplesNamespace: holiday-destinations-api-javascript-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:0a500f2c39bf68062ed1283620178617c5657e1a0c9fcc3dfe5e20a4cb50bbbb
+        codeSamplesRevisionDigest: sha256:60ce06a83d6d930ee5ee4a79f8797181010cef263679f7db905e53b564eef411
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest

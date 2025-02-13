@@ -31,7 +31,7 @@ export class Destinations extends ClientSDK {
   }
 
   /**
-   * Create Destination
+   * Create a Destination
    *
    * @remarks
    * Add a new holiday destination to the database.

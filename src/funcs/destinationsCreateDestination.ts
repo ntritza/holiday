@@ -23,7 +23,7 @@ import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import { Result } from "../types/fp.js";
 
 /**
- * Create Destination
+ * Create a Destination
  *
  * @remarks
  * Add a new holiday destination to the database.
