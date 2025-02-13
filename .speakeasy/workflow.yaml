@@ -3,9 +3,9 @@ speakeasyVersion: latest
 sources:
     Holiday Destinations API:
         inputs:
-            - location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api
+            - location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api2
         registry:
-            location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api
+            location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api2
 targets:
     holiday:
         target: typescript
