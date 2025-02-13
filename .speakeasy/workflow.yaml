@@ -1,21 +1,21 @@
 workflowVersion: 1.0.0
 speakeasyVersion: latest
 sources:
-    Holiday Destinations API:
+    Holiday Destination API:
         inputs:
-            - location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api2
+            - location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destination-api
         registry:
-            location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api2
+            location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destination-api
 targets:
     holiday:
         target: typescript
-        source: Holiday Destinations API
+        source: Holiday Destination API
         publish:
             npm:
                 token: $npm_token
         codeSamples:
             registry:
-                location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api-javascript-typescript-code-samples
+                location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destination-api-javascript-typescript-code-samples
             style: readme
             langOverride: javascript
             blocking: false

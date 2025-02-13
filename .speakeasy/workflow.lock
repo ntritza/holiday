@@ -1,5 +1,12 @@
 speakeasyVersion: 1.490.0
 sources:
+    Holiday Destination API:
+        sourceNamespace: holiday-destination-api
+        sourceRevisionDigest: sha256:874dd0f404e2df6e107cf1331f91f079092c2d058cd725fcd5da76df5470095a
+        sourceBlobDigest: sha256:0fd38976b131264fd24a886a406638a49d46ea44216e90dd6d6a263008232c8c
+        tags:
+            - latest
+            - 1.2.0
     Holiday Destinations API:
         sourceNamespace: holiday-destinations-api2
         sourceRevisionDigest: sha256:a9d0ffa9a567c9f7a14cdbe653b7ded62f68f52687c631347121c7f282cae8c5
@@ -9,31 +16,31 @@ sources:
             - 1.2.0
 targets:
     holiday:
-        source: Holiday Destinations API
-        sourceNamespace: holiday-destinations-api2
-        sourceRevisionDigest: sha256:a9d0ffa9a567c9f7a14cdbe653b7ded62f68f52687c631347121c7f282cae8c5
+        source: Holiday Destination API
+        sourceNamespace: holiday-destination-api
+        sourceRevisionDigest: sha256:874dd0f404e2df6e107cf1331f91f079092c2d058cd725fcd5da76df5470095a
         sourceBlobDigest: sha256:0fd38976b131264fd24a886a406638a49d46ea44216e90dd6d6a263008232c8c
-        codeSamplesNamespace: holiday-destinations-api-javascript-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:60ce06a83d6d930ee5ee4a79f8797181010cef263679f7db905e53b564eef411
+        codeSamplesNamespace: holiday-destination-api-javascript-typescript-code-samples
+        codeSamplesRevisionDigest: sha256:fac8379a4f272eb892a300b71b303871f9589c0b94bc389a41d3c0beb19f91ae
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
-        Holiday Destinations API:
+        Holiday Destination API:
             inputs:
                 - location: ../openapi.yaml
             registry:
-                location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api2
+                location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destination-api
     targets:
         holiday:
             target: typescript
-            source: Holiday Destinations API
+            source: Holiday Destination API
             publish:
                 npm:
                     token: $npm_token
             codeSamples:
                 registry:
-                    location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api-javascript-typescript-code-samples
+                    location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destination-api-javascript-typescript-code-samples
                 style: readme
                 langOverride: javascript
                 blocking: false
