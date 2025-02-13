@@ -17,7 +17,7 @@ generation:
     oAuth2ClientCredentialsEnabled: true
     oAuth2PasswordEnabled: true
 typescript:
-  version: 0.1.4
+  version: 0.1.5
   additionalDependencies:
     dependencies: {}
     devDependencies: {}
@@ -45,7 +45,7 @@ typescript:
   methodArguments: require-security-and-request
   moduleFormat: commonjs
   outputModelSuffix: output
-  packageName: holiday
+  packageName: holiday-test-sdk
   responseFormat: flat
   templateVersion: v2
   useIndexModules: true

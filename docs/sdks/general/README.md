@@ -16,7 +16,7 @@ Root endpoint, returns a friendly greeting.
 ### Example Usage
 
 ```typescript
-import { Holiday } from "holiday";
+import { Holiday } from "holiday-test-sdk";
 
 const holiday = new Holiday();
 
@@ -35,8 +35,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { HolidayCore } from "holiday/core.js";
-import { generalReadRootGet } from "holiday/funcs/generalReadRootGet.js";
+import { HolidayCore } from "holiday-test-sdk/core.js";
+import { generalReadRootGet } from "holiday-test-sdk/funcs/generalReadRootGet.js";
 
 // Use `HolidayCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

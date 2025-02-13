@@ -20,7 +20,7 @@ Retrieve a list of all holiday destinations in the database, optionally filtered
 ### Example Usage
 
 ```typescript
-import { Holiday } from "holiday";
+import { Holiday } from "holiday-test-sdk";
 
 const holiday = new Holiday();
 
@@ -39,8 +39,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { HolidayCore } from "holiday/core.js";
-import { destinationsGetDestinationsDestinationsGet } from "holiday/funcs/destinationsGetDestinationsDestinationsGet.js";
+import { HolidayCore } from "holiday-test-sdk/core.js";
+import { destinationsGetDestinationsDestinationsGet } from "holiday-test-sdk/funcs/destinationsGetDestinationsDestinationsGet.js";
 
 // Use `HolidayCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -89,7 +89,7 @@ Add a new holiday destination to the database.
 ### Example Usage
 
 ```typescript
-import { Holiday } from "holiday";
+import { Holiday } from "holiday-test-sdk";
 
 const holiday = new Holiday();
 
@@ -113,8 +113,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { HolidayCore } from "holiday/core.js";
-import { destinationsCreateDestinationDestinationsPost } from "holiday/funcs/destinationsCreateDestinationDestinationsPost.js";
+import { HolidayCore } from "holiday-test-sdk/core.js";
+import { destinationsCreateDestinationDestinationsPost } from "holiday-test-sdk/funcs/destinationsCreateDestinationDestinationsPost.js";
 
 // Use `HolidayCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -168,7 +168,7 @@ Remove a holiday destination from the database by its ID.
 ### Example Usage
 
 ```typescript
-import { Holiday } from "holiday";
+import { Holiday } from "holiday-test-sdk";
 
 const holiday = new Holiday();
 
@@ -188,8 +188,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { HolidayCore } from "holiday/core.js";
-import { destinationsDeleteDestinationDestinationsDestinationIdDelete } from "holiday/funcs/destinationsDeleteDestinationDestinationsDestinationIdDelete.js";
+import { HolidayCore } from "holiday-test-sdk/core.js";
+import { destinationsDeleteDestinationDestinationsDestinationIdDelete } from "holiday-test-sdk/funcs/destinationsDeleteDestinationDestinationsDestinationIdDelete.js";
 
 // Use `HolidayCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -239,7 +239,7 @@ Retrieve details of a specific holiday destination by its ID.
 ### Example Usage
 
 ```typescript
-import { Holiday } from "holiday";
+import { Holiday } from "holiday-test-sdk";
 
 const holiday = new Holiday();
 
@@ -260,8 +260,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { HolidayCore } from "holiday/core.js";
-import { destinationsGetDestinationByIdDestinationsDestinationIdGet } from "holiday/funcs/destinationsGetDestinationByIdDestinationsDestinationIdGet.js";
+import { HolidayCore } from "holiday-test-sdk/core.js";
+import { destinationsGetDestinationByIdDestinationsDestinationIdGet } from "holiday-test-sdk/funcs/destinationsGetDestinationByIdDestinationsDestinationIdGet.js";
 
 // Use `HolidayCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
@@ -312,7 +312,7 @@ Update details of a specific holiday destination by its ID.
 ### Example Usage
 
 ```typescript
-import { Holiday } from "holiday";
+import { Holiday } from "holiday-test-sdk";
 
 const holiday = new Holiday();
 
@@ -339,8 +339,8 @@ run();
 The standalone function version of this method:
 
 ```typescript
-import { HolidayCore } from "holiday/core.js";
-import { destinationsUpdateDestinationDestinationsDestinationIdPut } from "holiday/funcs/destinationsUpdateDestinationDestinationsDestinationIdPut.js";
+import { HolidayCore } from "holiday-test-sdk/core.js";
+import { destinationsUpdateDestinationDestinationsDestinationIdPut } from "holiday-test-sdk/funcs/destinationsUpdateDestinationDestinationsDestinationIdPut.js";
 
 // Use `HolidayCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

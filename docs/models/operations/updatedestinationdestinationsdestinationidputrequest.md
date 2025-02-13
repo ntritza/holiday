@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { UpdateDestinationDestinationsDestinationIdPutRequest } from "holiday/models/operations";
+import { UpdateDestinationDestinationsDestinationIdPutRequest } from "holiday-test-sdk/models/operations";
 
 let value: UpdateDestinationDestinationsDestinationIdPutRequest = {
   destinationId: 1,

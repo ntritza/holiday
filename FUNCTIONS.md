@@ -19,9 +19,9 @@ specific category of applications.
 ## Example
 
 ```typescript
-import { HolidayCore } from "holiday/core.js";
-import { generalReadRootGet } from "holiday/funcs/generalReadRootGet.js";
-import { SDKValidationError } from "holiday/models/errors/sdkvalidationerror.js";
+import { HolidayCore } from "holiday-test-sdk/core.js";
+import { generalReadRootGet } from "holiday-test-sdk/funcs/generalReadRootGet.js";
+import { SDKValidationError } from "holiday-test-sdk/models/errors/sdkvalidationerror.js";
 
 // Use `HolidayCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.

@@ -5,7 +5,7 @@ Represents a holiday destination.
 ## Example Usage
 
 ```typescript
-import { Destination } from "holiday/models/components";
+import { Destination } from "holiday-test-sdk/models/components";
 
 let value: Destination = {
   country: "Indonesia",

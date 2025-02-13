@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { ValidationError } from "holiday/models/components";
+import { ValidationError } from "holiday-test-sdk/models/components";
 
 let value: ValidationError = {
   loc: [

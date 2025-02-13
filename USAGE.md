@@ -1,6 +1,6 @@
 <!-- Start SDK Example Usage [usage] -->
 ```typescript
-import { Holiday } from "holiday";
+import { Holiday } from "holiday-test-sdk";
 
 const holiday = new Holiday();
 

@@ -3,7 +3,7 @@
 ## Example Usage
 
 ```typescript
-import { GetDestinationByIdDestinationsDestinationIdGetRequest } from "holiday/models/operations";
+import { GetDestinationByIdDestinationsDestinationIdGetRequest } from "holiday-test-sdk/models/operations";
 
 let value: GetDestinationByIdDestinationsDestinationIdGetRequest = {
   destinationId: 0,
