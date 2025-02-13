@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: a7fc7e38-bfbb-47ac-b2a0-26a8dab6f751
 management:
-  docChecksum: 1f757f354e82d34677e454d0119eb985
-  docVersion: 1.1.0
+  docChecksum: c8d3d12ead1774d6c9d6652e63cf9860
+  docVersion: 1.2.0
   speakeasyVersion: 1.490.0
   generationVersion: 2.512.0
-  releaseVersion: 0.1.8
-  configChecksum: 8da3aaad2518639a1eaded370fdebbed
+  releaseVersion: 0.2.0
+  configChecksum: a4ec9133d881f099675a359efac2d89a
   published: true
 features:
   typescript:
@@ -38,7 +38,7 @@ generatedFiles:
   - docs/models/errors/httpvalidationerror.md
   - docs/models/operations/deletedestinationdestinationsdestinationiddeleterequest.md
   - docs/models/operations/getdestinationbyiddestinationsdestinationidgetrequest.md
-  - docs/models/operations/getdestinationsdestinationsgetrequest.md
+  - docs/models/operations/getdestinationsrequest.md
   - docs/models/operations/updatedestinationdestinationsdestinationidputrequest.md
   - docs/sdks/destinations/README.md
   - docs/sdks/general/README.md
@@ -47,10 +47,10 @@ generatedFiles:
   - jsr.json
   - package.json
   - src/core.ts
-  - src/funcs/destinationsCreateDestinationDestinationsPost.ts
+  - src/funcs/destinationsCreateDestination.ts
   - src/funcs/destinationsDeleteDestinationDestinationsDestinationIdDelete.ts
   - src/funcs/destinationsGetDestinationByIdDestinationsDestinationIdGet.ts
-  - src/funcs/destinationsGetDestinationsDestinationsGet.ts
+  - src/funcs/destinationsGetDestinations.ts
   - src/funcs/destinationsUpdateDestinationDestinationsDestinationIdPut.ts
   - src/funcs/generalReadRootGet.ts
   - src/hooks/hooks.ts
@@ -83,7 +83,7 @@ generatedFiles:
   - src/models/errors/sdkvalidationerror.ts
   - src/models/operations/deletedestinationdestinationsdestinationiddelete.ts
   - src/models/operations/getdestinationbyiddestinationsdestinationidget.ts
-  - src/models/operations/getdestinationsdestinationsget.ts
+  - src/models/operations/getdestinations.ts
   - src/models/operations/index.ts
   - src/models/operations/updatedestinationdestinationsdestinationidput.ts
   - src/sdk/destinations.ts
@@ -147,6 +147,23 @@ examples:
         application/json: {"country": "Indonesia", "description": "Beautiful beaches and vibrant culture.", "name": "Bali", "rating": 4.8}
       responses:
         "200":
+          application/json: {"country": "Indonesia", "description": "Beautiful beaches and vibrant culture.", "name": "Bali", "rating": 4.8}
+        "422": {}
+  getDestinations:
+    speakeasy-default-get-destinations:
+      parameters:
+        query:
+          min_rating: 0
+      responses:
+        "200":
+          application/json: [{"country": "Indonesia", "description": "Beautiful beaches and vibrant culture.", "name": "Bali", "rating": 4.8}]
+        "422": {}
+  createDestination:
+    speakeasy-default-create-destination:
+      requestBody:
+        application/json: {"country": "Indonesia", "description": "Beautiful beaches and vibrant culture.", "name": "Bali", "rating": 4.8}
+      responses:
+        "201":
           application/json: {"country": "Indonesia", "description": "Beautiful beaches and vibrant culture.", "name": "Bali", "rating": 4.8}
         "422": {}
 examplesVersion: 1.0.0

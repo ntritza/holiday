@@ -109,8 +109,8 @@ run();
 
 ### [destinations](docs/sdks/destinations/README.md)
 
-* [getDestinationsDestinationsGet](docs/sdks/destinations/README.md#getdestinationsdestinationsget) - Get Destinations
-* [createDestinationDestinationsPost](docs/sdks/destinations/README.md#createdestinationdestinationspost) - Create Destination
+* [getDestinations](docs/sdks/destinations/README.md#getdestinations) - Get Destinations
+* [createDestination](docs/sdks/destinations/README.md#createdestination) - Create Destination
 * [deleteDestinationDestinationsDestinationIdDelete](docs/sdks/destinations/README.md#deletedestinationdestinationsdestinationiddelete) - Delete Destination
 * [getDestinationByIdDestinationsDestinationIdGet](docs/sdks/destinations/README.md#getdestinationbyiddestinationsdestinationidget) - Get Destination By Id
 * [updateDestinationDestinationsDestinationIdPut](docs/sdks/destinations/README.md#updatedestinationdestinationsdestinationidput) - Update Destination
@@ -138,10 +138,10 @@ To read more about standalone functions, check [FUNCTIONS.md](./FUNCTIONS.md).
 
 <summary>Available standalone functions</summary>
 
-- [`destinationsCreateDestinationDestinationsPost`](docs/sdks/destinations/README.md#createdestinationdestinationspost) - Create Destination
+- [`destinationsCreateDestination`](docs/sdks/destinations/README.md#createdestination) - Create Destination
 - [`destinationsDeleteDestinationDestinationsDestinationIdDelete`](docs/sdks/destinations/README.md#deletedestinationdestinationsdestinationiddelete) - Delete Destination
 - [`destinationsGetDestinationByIdDestinationsDestinationIdGet`](docs/sdks/destinations/README.md#getdestinationbyiddestinationsdestinationidget) - Get Destination By Id
-- [`destinationsGetDestinationsDestinationsGet`](docs/sdks/destinations/README.md#getdestinationsdestinationsget) - Get Destinations
+- [`destinationsGetDestinations`](docs/sdks/destinations/README.md#getdestinations) - Get Destinations
 - [`destinationsUpdateDestinationDestinationsDestinationIdPut`](docs/sdks/destinations/README.md#updatedestinationdestinationsdestinationidput) - Update Destination
 - [`generalReadRootGet`](docs/sdks/general/README.md#readrootget) - Read Root
 
@@ -213,7 +213,7 @@ run();
 <!-- Start Error Handling [errors] -->
 ## Error Handling
 
-Some methods specify known errors which can be thrown. All the known errors are enumerated in the `models/errors/errors.ts` module. The known errors for a method are documented under the *Errors* tables in SDK docs. For example, the `getDestinationsDestinationsGet` method may throw the following errors:
+Some methods specify known errors which can be thrown. All the known errors are enumerated in the `models/errors/errors.ts` module. The known errors for a method are documented under the *Errors* tables in SDK docs. For example, the `getDestinations` method may throw the following errors:
 
 | Error Type                 | Status Code | Content Type     |
 | -------------------------- | ----------- | ---------------- |
@@ -234,7 +234,7 @@ const holiday = new Holiday();
 async function run() {
   let result;
   try {
-    result = await holiday.destinations.getDestinationsDestinationsGet({});
+    result = await holiday.destinations.getDestinations({});
 
     // Handle the result
     console.log(result);

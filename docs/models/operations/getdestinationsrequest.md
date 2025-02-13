@@ -1,11 +1,11 @@
-# GetDestinationsDestinationsGetRequest
+# GetDestinationsRequest
 
 ## Example Usage
 
 ```typescript
-import { GetDestinationsDestinationsGetRequest } from "holiday-test-sdk/models/operations";
+import { GetDestinationsRequest } from "holiday-test-sdk/models/operations";
 
-let value: GetDestinationsDestinationsGetRequest = {};
+let value: GetDestinationsRequest = {};
 ```
 
 ## Fields

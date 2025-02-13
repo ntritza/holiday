@@ -7,13 +7,13 @@ Endpoints for managing holiday destinations
 
 ### Available Operations
 
-* [getDestinationsDestinationsGet](#getdestinationsdestinationsget) - Get Destinations
-* [createDestinationDestinationsPost](#createdestinationdestinationspost) - Create Destination
+* [getDestinations](#getdestinations) - Get Destinations
+* [createDestination](#createdestination) - Create Destination
 * [deleteDestinationDestinationsDestinationIdDelete](#deletedestinationdestinationsdestinationiddelete) - Delete Destination
 * [getDestinationByIdDestinationsDestinationIdGet](#getdestinationbyiddestinationsdestinationidget) - Get Destination By Id
 * [updateDestinationDestinationsDestinationIdPut](#updatedestinationdestinationsdestinationidput) - Update Destination
 
-## getDestinationsDestinationsGet
+## getDestinations
 
 Retrieve a list of all holiday destinations in the database, optionally filtered by minimum rating.
 
@@ -25,7 +25,7 @@ import { Holiday } from "holiday-test-sdk";
 const holiday = new Holiday();
 
 async function run() {
-  const result = await holiday.destinations.getDestinationsDestinationsGet({});
+  const result = await holiday.destinations.getDestinations({});
 
   // Handle the result
   console.log(result);
@@ -40,14 +40,14 @@ The standalone function version of this method:
 
 ```typescript
 import { HolidayCore } from "holiday-test-sdk/core.js";
-import { destinationsGetDestinationsDestinationsGet } from "holiday-test-sdk/funcs/destinationsGetDestinationsDestinationsGet.js";
+import { destinationsGetDestinations } from "holiday-test-sdk/funcs/destinationsGetDestinations.js";
 
 // Use `HolidayCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const holiday = new HolidayCore();
 
 async function run() {
-  const res = await destinationsGetDestinationsDestinationsGet(holiday, {});
+  const res = await destinationsGetDestinations(holiday, {});
 
   if (!res.ok) {
     throw res.error;
@@ -66,7 +66,7 @@ run();
 
 | Parameter                                                                                                                                                                      | Type                                                                                                                                                                           | Required                                                                                                                                                                       | Description                                                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                      | [operations.GetDestinationsDestinationsGetRequest](../../models/operations/getdestinationsdestinationsgetrequest.md)                                                           | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
+| `request`                                                                                                                                                                      | [operations.GetDestinationsRequest](../../models/operations/getdestinationsrequest.md)                                                                                         | :heavy_check_mark:                                                                                                                                                             | The request object to use for the request.                                                                                                                                     |
 | `options`                                                                                                                                                                      | RequestOptions                                                                                                                                                                 | :heavy_minus_sign:                                                                                                                                                             | Used to set various options for making HTTP requests.                                                                                                                          |
 | `options.fetchOptions`                                                                                                                                                         | [RequestInit](https://developer.mozilla.org/en-US/docs/Web/API/Request/Request#options)                                                                                        | :heavy_minus_sign:                                                                                                                                                             | Options that are passed to the underlying HTTP request. This can be used to inject extra headers for examples. All `Request` options, except `method` and `body`, are allowed. |
 | `options.retries`                                                                                                                                                              | [RetryConfig](../../lib/utils/retryconfig.md)                                                                                                                                  | :heavy_minus_sign:                                                                                                                                                             | Enables retrying HTTP requests under certain failure conditions.                                                                                                               |
@@ -82,7 +82,7 @@ run();
 | errors.HTTPValidationError | 422                        | application/json           |
 | errors.APIError            | 4XX, 5XX                   | \*/\*                      |
 
-## createDestinationDestinationsPost
+## createDestination
 
 Add a new holiday destination to the database.
 
@@ -94,7 +94,7 @@ import { Holiday } from "holiday-test-sdk";
 const holiday = new Holiday();
 
 async function run() {
-  const result = await holiday.destinations.createDestinationDestinationsPost({
+  const result = await holiday.destinations.createDestination({
     country: "Indonesia",
     description: "Beautiful beaches and vibrant culture.",
     name: "Bali",
@@ -114,14 +114,14 @@ The standalone function version of this method:
 
 ```typescript
 import { HolidayCore } from "holiday-test-sdk/core.js";
-import { destinationsCreateDestinationDestinationsPost } from "holiday-test-sdk/funcs/destinationsCreateDestinationDestinationsPost.js";
+import { destinationsCreateDestination } from "holiday-test-sdk/funcs/destinationsCreateDestination.js";
 
 // Use `HolidayCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const holiday = new HolidayCore();
 
 async function run() {
-  const res = await destinationsCreateDestinationDestinationsPost(holiday, {
+  const res = await destinationsCreateDestination(holiday, {
     country: "Indonesia",
     description: "Beautiful beaches and vibrant culture.",
     name: "Bali",

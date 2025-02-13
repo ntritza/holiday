@@ -2,25 +2,26 @@ speakeasyVersion: 1.490.0
 sources:
     Holiday Destinations API:
         sourceNamespace: holiday-destinations-api
-        sourceRevisionDigest: sha256:6673a3a5fecde9677c7d91366ef05fc3f96bf31aff9f07900276c590c9ec2322
-        sourceBlobDigest: sha256:b269394a48aa239da1334c1dd53707b44627a018a66405c8426d922f055e4f43
+        sourceRevisionDigest: sha256:06feb482ca27543f26f8596c96a8bab82ef352f0f93ddae2ce8fc62dd3f74ec7
+        sourceBlobDigest: sha256:e5920878dd4a5fe3bfc88d38daa3fe93735ae9f822e57dd7dbafe92a57fb6223
         tags:
             - latest
+            - 1.2.0
 targets:
     holiday:
         source: Holiday Destinations API
         sourceNamespace: holiday-destinations-api
-        sourceRevisionDigest: sha256:6673a3a5fecde9677c7d91366ef05fc3f96bf31aff9f07900276c590c9ec2322
-        sourceBlobDigest: sha256:b269394a48aa239da1334c1dd53707b44627a018a66405c8426d922f055e4f43
+        sourceRevisionDigest: sha256:06feb482ca27543f26f8596c96a8bab82ef352f0f93ddae2ce8fc62dd3f74ec7
+        sourceBlobDigest: sha256:e5920878dd4a5fe3bfc88d38daa3fe93735ae9f822e57dd7dbafe92a57fb6223
         codeSamplesNamespace: holiday-destinations-api-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:0e0aa43054b3af2780c4e1d5e730eb2b616c4a684336db34887f576fb138dbaf
+        codeSamplesRevisionDigest: sha256:2d486dcf99e3bec217bacfc4a407661f526f8d308d7a8dd4a4b87580dfbf61e8
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
         Holiday Destinations API:
             inputs:
-                - location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api
+                - location: ../openapi.yaml
             registry:
                 location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api
     targets:

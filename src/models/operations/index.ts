@@ -4,5 +4,5 @@
 
 export * from "./deletedestinationdestinationsdestinationiddelete.js";
 export * from "./getdestinationbyiddestinationsdestinationidget.js";
-export * from "./getdestinationsdestinationsget.js";
+export * from "./getdestinations.js";
 export * from "./updatedestinationdestinationsdestinationidput.js";
