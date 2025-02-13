@@ -10,6 +10,9 @@ targets:
     holiday:
         target: typescript
         source: Holiday Destinations API
+        publish:
+            npm:
+                token: $npm_token
         codeSamples:
             registry:
                 location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api-typescript-code-samples
