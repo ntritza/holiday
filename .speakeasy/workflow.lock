@@ -13,7 +13,7 @@ targets:
         sourceRevisionDigest: sha256:6673a3a5fecde9677c7d91366ef05fc3f96bf31aff9f07900276c590c9ec2322
         sourceBlobDigest: sha256:b269394a48aa239da1334c1dd53707b44627a018a66405c8426d922f055e4f43
         codeSamplesNamespace: holiday-destinations-api-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:517c6a803d6ebe0b0c7d288ba1d64df1d5fec5ee7b639bd790785d46bf8468c2
+        codeSamplesRevisionDigest: sha256:0e0aa43054b3af2780c4e1d5e730eb2b616c4a684336db34887f576fb138dbaf
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
