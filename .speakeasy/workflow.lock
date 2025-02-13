@@ -6,22 +6,21 @@ sources:
         sourceBlobDigest: sha256:e5920878dd4a5fe3bfc88d38daa3fe93735ae9f822e57dd7dbafe92a57fb6223
         tags:
             - latest
-            - 1.2.0
 targets:
     holiday:
         source: Holiday Destinations API
         sourceNamespace: holiday-destinations-api
         sourceRevisionDigest: sha256:06feb482ca27543f26f8596c96a8bab82ef352f0f93ddae2ce8fc62dd3f74ec7
         sourceBlobDigest: sha256:e5920878dd4a5fe3bfc88d38daa3fe93735ae9f822e57dd7dbafe92a57fb6223
-        codeSamplesNamespace: holiday-destinations-api-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:2d486dcf99e3bec217bacfc4a407661f526f8d308d7a8dd4a4b87580dfbf61e8
+        codeSamplesNamespace: holiday-destinations-api-javascript-typescript-code-samples
+        codeSamplesRevisionDigest: sha256:ddf88dc5ff4d4cfea4d0e4f97415fc1594c4371d1707a1ae77ad4b41b3a06d4a
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
         Holiday Destinations API:
             inputs:
-                - location: ../openapi.yaml
+                - location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api
             registry:
                 location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api
     targets:
@@ -33,9 +32,7 @@ workflow:
                     token: $npm_token
             codeSamples:
                 registry:
-                    location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api-typescript-code-samples
+                    location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api-javascript-typescript-code-samples
                 style: readme
                 langOverride: javascript
-                labelOverride:
-                    fixedValue: Typescript (SDK)
                 blocking: false

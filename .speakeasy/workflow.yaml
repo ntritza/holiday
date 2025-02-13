@@ -15,9 +15,7 @@ targets:
                 token: $npm_token
         codeSamples:
             registry:
-                location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api-typescript-code-samples
+                location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api-javascript-typescript-code-samples
             style: readme
             langOverride: javascript
-            labelOverride:
-                fixedValue: Typescript (SDK)
             blocking: false
