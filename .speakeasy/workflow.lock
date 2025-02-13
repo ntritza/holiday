@@ -1,12 +1,11 @@
 speakeasyVersion: 1.490.0
 sources:
     Holiday Destination API:
-        sourceNamespace: holiday-destination-api
-        sourceRevisionDigest: sha256:874dd0f404e2df6e107cf1331f91f079092c2d058cd725fcd5da76df5470095a
-        sourceBlobDigest: sha256:0fd38976b131264fd24a886a406638a49d46ea44216e90dd6d6a263008232c8c
+        sourceNamespace: holiday-destinations-api
+        sourceRevisionDigest: sha256:06feb482ca27543f26f8596c96a8bab82ef352f0f93ddae2ce8fc62dd3f74ec7
+        sourceBlobDigest: sha256:e5920878dd4a5fe3bfc88d38daa3fe93735ae9f822e57dd7dbafe92a57fb6223
         tags:
             - latest
-            - 1.2.0
     Holiday Destinations API:
         sourceNamespace: holiday-destinations-api2
         sourceRevisionDigest: sha256:a9d0ffa9a567c9f7a14cdbe653b7ded62f68f52687c631347121c7f282cae8c5
@@ -17,20 +16,20 @@ sources:
 targets:
     holiday:
         source: Holiday Destination API
-        sourceNamespace: holiday-destination-api
-        sourceRevisionDigest: sha256:874dd0f404e2df6e107cf1331f91f079092c2d058cd725fcd5da76df5470095a
-        sourceBlobDigest: sha256:0fd38976b131264fd24a886a406638a49d46ea44216e90dd6d6a263008232c8c
-        codeSamplesNamespace: holiday-destination-api-javascript-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:fac8379a4f272eb892a300b71b303871f9589c0b94bc389a41d3c0beb19f91ae
+        sourceNamespace: holiday-destinations-api
+        sourceRevisionDigest: sha256:06feb482ca27543f26f8596c96a8bab82ef352f0f93ddae2ce8fc62dd3f74ec7
+        sourceBlobDigest: sha256:e5920878dd4a5fe3bfc88d38daa3fe93735ae9f822e57dd7dbafe92a57fb6223
+        codeSamplesNamespace: holiday-destinations-api-typescript-code-samples
+        codeSamplesRevisionDigest: sha256:d2d6d42f9f0a1338ba4216d4364db8590cac36b48be0ac4159e05580399b13ad
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
         Holiday Destination API:
             inputs:
-                - location: ../openapi.yaml
+                - location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api
             registry:
-                location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destination-api
+                location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api
     targets:
         holiday:
             target: typescript
@@ -40,7 +39,7 @@ workflow:
                     token: $npm_token
             codeSamples:
                 registry:
-                    location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destination-api-javascript-typescript-code-samples
+                    location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api-typescript-code-samples
                 style: readme
                 langOverride: javascript
                 blocking: false
