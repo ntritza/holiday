@@ -1,0 +1,36 @@
+speakeasyVersion: 1.490.0
+sources:
+    Holiday Destinations API:
+        sourceNamespace: holiday-destinations-api
+        sourceRevisionDigest: sha256:903b0dcf01ad28b05f9f7b6c01ec2fa7456361e40328634d5992306a74671159
+        sourceBlobDigest: sha256:b269394a48aa239da1334c1dd53707b44627a018a66405c8426d922f055e4f43
+        tags:
+            - latest
+            - 1.1.0
+targets:
+    holiday:
+        source: Holiday Destinations API
+        sourceNamespace: holiday-destinations-api
+        sourceRevisionDigest: sha256:903b0dcf01ad28b05f9f7b6c01ec2fa7456361e40328634d5992306a74671159
+        sourceBlobDigest: sha256:b269394a48aa239da1334c1dd53707b44627a018a66405c8426d922f055e4f43
+        codeSamplesNamespace: holiday-destinations-api-typescript-code-samples
+        codeSamplesRevisionDigest: sha256:ed15d7799825097dd16e5c9007c0f5c7160c8a7e788bfe481ca4d9b0dee96e96
+workflow:
+    workflowVersion: 1.0.0
+    speakeasyVersion: latest
+    sources:
+        Holiday Destinations API:
+            inputs:
+                - location: ../openapi.yaml
+            registry:
+                location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api
+    targets:
+        holiday:
+            target: typescript
+            source: Holiday Destinations API
+            codeSamples:
+                registry:
+                    location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api-typescript-code-samples
+                labelOverride:
+                    fixedValue: Typescript (SDK)
+                blocking: false

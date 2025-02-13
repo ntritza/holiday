@@ -1,0 +1,152 @@
+lockVersion: 2.0.0
+id: a7fc7e38-bfbb-47ac-b2a0-26a8dab6f751
+management:
+  docChecksum: 5a1a98d4522704cccd553e3e9fd69aad
+  docVersion: 1.1.0
+  speakeasyVersion: 1.490.0
+  generationVersion: 2.512.0
+  releaseVersion: 0.1.0
+  configChecksum: ae1351be84e61fb9682a41a8309ff5ef
+features:
+  typescript:
+    additionalDependencies: 0.1.0
+    constsAndDefaults: 0.1.11
+    core: 3.19.0
+    defaultEnabledRetries: 0.1.0
+    devContainers: 2.90.0
+    envVarSecurityUsage: 0.1.2
+    globalSecurityCallbacks: 0.1.0
+    globalServerURLs: 2.82.4
+    responseFormat: 0.2.3
+    retries: 2.83.0
+    sdkHooks: 0.2.0
+    unions: 2.85.8
+generatedFiles:
+  - .devcontainer/README.md
+  - .devcontainer/devcontainer.json
+  - .devcontainer/setup.sh
+  - .gitattributes
+  - .npmignore
+  - FUNCTIONS.md
+  - RUNTIMES.md
+  - USAGE.md
+  - docs/lib/utils/retryconfig.md
+  - docs/models/components/destination.md
+  - docs/models/components/loc.md
+  - docs/models/components/validationerror.md
+  - docs/models/errors/httpvalidationerror.md
+  - docs/models/operations/deletedestinationdestinationsdestinationiddeleterequest.md
+  - docs/models/operations/getdestinationbyiddestinationsdestinationidgetrequest.md
+  - docs/models/operations/getdestinationsdestinationsgetrequest.md
+  - docs/models/operations/updatedestinationdestinationsdestinationidputrequest.md
+  - docs/sdks/destinations/README.md
+  - docs/sdks/general/README.md
+  - docs/sdks/holiday/README.md
+  - eslint.config.mjs
+  - jsr.json
+  - package.json
+  - src/core.ts
+  - src/funcs/destinationsCreateDestinationDestinationsPost.ts
+  - src/funcs/destinationsDeleteDestinationDestinationsDestinationIdDelete.ts
+  - src/funcs/destinationsGetDestinationByIdDestinationsDestinationIdGet.ts
+  - src/funcs/destinationsGetDestinationsDestinationsGet.ts
+  - src/funcs/destinationsUpdateDestinationDestinationsDestinationIdPut.ts
+  - src/funcs/generalReadRootGet.ts
+  - src/hooks/hooks.ts
+  - src/hooks/index.ts
+  - src/hooks/types.ts
+  - src/index.ts
+  - src/lib/base64.ts
+  - src/lib/config.ts
+  - src/lib/dlv.ts
+  - src/lib/encodings.ts
+  - src/lib/env.ts
+  - src/lib/files.ts
+  - src/lib/http.ts
+  - src/lib/is-plain-object.ts
+  - src/lib/logger.ts
+  - src/lib/matchers.ts
+  - src/lib/primitives.ts
+  - src/lib/retries.ts
+  - src/lib/schemas.ts
+  - src/lib/sdks.ts
+  - src/lib/security.ts
+  - src/lib/url.ts
+  - src/models/components/destination.ts
+  - src/models/components/index.ts
+  - src/models/components/validationerror.ts
+  - src/models/errors/apierror.ts
+  - src/models/errors/httpclienterrors.ts
+  - src/models/errors/httpvalidationerror.ts
+  - src/models/errors/index.ts
+  - src/models/errors/sdkvalidationerror.ts
+  - src/models/operations/deletedestinationdestinationsdestinationiddelete.ts
+  - src/models/operations/getdestinationbyiddestinationsdestinationidget.ts
+  - src/models/operations/getdestinationsdestinationsget.ts
+  - src/models/operations/index.ts
+  - src/models/operations/updatedestinationdestinationsdestinationidput.ts
+  - src/sdk/destinations.ts
+  - src/sdk/general.ts
+  - src/sdk/index.ts
+  - src/sdk/sdk.ts
+  - src/types/blobs.ts
+  - src/types/constdatetime.ts
+  - src/types/enums.ts
+  - src/types/fp.ts
+  - src/types/index.ts
+  - src/types/operations.ts
+  - src/types/rfcdate.ts
+  - src/types/streams.ts
+  - tsconfig.json
+examples:
+  read_root__get:
+    speakeasy-default-read-root-get:
+      responses:
+        "200":
+          application/json: "<value>"
+  get_destinations_destinations_get:
+    speakeasy-default-get-destinations-destinations-get:
+      parameters:
+        query:
+          min_rating: 0
+      responses:
+        "200":
+          application/json: [{"country": "Indonesia", "description": "Beautiful beaches and vibrant culture.", "name": "Bali", "rating": 4.8}, {"country": "Indonesia", "description": "Beautiful beaches and vibrant culture.", "name": "Bali", "rating": 4.8}]
+        "422":
+          application/json: {}
+  create_destination_destinations_post:
+    speakeasy-default-create-destination-destinations-post:
+      requestBody:
+        application/json: {"country": "Indonesia", "description": "Beautiful beaches and vibrant culture.", "name": "Bali", "rating": 4.8}
+      responses:
+        "201":
+          application/json: {"country": "Indonesia", "description": "Beautiful beaches and vibrant culture.", "name": "Bali", "rating": 4.8}
+        "422":
+          application/json: {}
+  delete_destination_destinations__destination_id__delete:
+    "":
+      parameters:
+        path:
+          destination_id: 0
+  get_destination_by_id_destinations__destination_id__get:
+    "":
+      parameters:
+        path:
+          destination_id: 0
+      responses:
+        "200":
+          application/json: {"country": "Indonesia", "description": "Beautiful beaches and vibrant culture.", "name": "Bali", "rating": 4.8}
+        "422": {}
+  update_destination_destinations__destination_id__put:
+    "":
+      parameters:
+        path:
+          destination_id: 1
+      requestBody:
+        application/json: {"country": "Indonesia", "description": "Beautiful beaches and vibrant culture.", "name": "Bali", "rating": 4.8}
+      responses:
+        "200":
+          application/json: {"country": "Indonesia", "description": "Beautiful beaches and vibrant culture.", "name": "Bali", "rating": 4.8}
+        "422": {}
+examplesVersion: 1.0.0
+generatedTests: {}
