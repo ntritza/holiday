@@ -6,7 +6,6 @@ sources:
         sourceBlobDigest: sha256:b269394a48aa239da1334c1dd53707b44627a018a66405c8426d922f055e4f43
         tags:
             - latest
-            - 1.1.0
 targets:
     holiday:
         source: Holiday Destinations API
@@ -14,14 +13,14 @@ targets:
         sourceRevisionDigest: sha256:6673a3a5fecde9677c7d91366ef05fc3f96bf31aff9f07900276c590c9ec2322
         sourceBlobDigest: sha256:b269394a48aa239da1334c1dd53707b44627a018a66405c8426d922f055e4f43
         codeSamplesNamespace: holiday-destinations-api-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:96d2bb1f45b96182ff717d2628692042e523312531f10c6bd3876ad0f152e1d0
+        codeSamplesRevisionDigest: sha256:6cf122d075a5c9f5f17efcb3d13801742aac59dd2462836af4d6346b13cca284
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
     sources:
         Holiday Destinations API:
             inputs:
-                - location: ../openapi.yaml
+                - location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api
             registry:
                 location: registry.speakeasyapi.dev/ritza-rzx/ritza/holiday-destinations-api
     targets:
