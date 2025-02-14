@@ -1,9 +1,13 @@
 {
   "name": "holiday-test-sdk",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "author": "Speakeasy",
   "main": "./index.js",
   "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ntritza/holiday.git"
+  },
   "scripts": {
     "lint": "eslint --cache --max-warnings=0 src",
     "build": "tsc",
