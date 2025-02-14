@@ -3,10 +3,12 @@ id: a7fc7e38-bfbb-47ac-b2a0-26a8dab6f751
 management:
   docChecksum: fe6e291609d24c8a595672acfb68ecd6
   docVersion: 1.2.0
-  speakeasyVersion: 1.490.0
-  generationVersion: 2.512.0
-  releaseVersion: 1.2.5
-  configChecksum: a6ae49a1ab38740a3aad0121546b2cb9
+  speakeasyVersion: 1.492.0
+  generationVersion: 2.512.4
+  releaseVersion: 1.2.6
+  configChecksum: bea2b2e0a3ebc46f55670a017566eb35
+  repoURL: https://github.com/ntritza/holiday.git
+  installationURL: https://github.com/ntritza/holiday
   published: true
 features:
   typescript:
