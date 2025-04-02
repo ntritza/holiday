@@ -17,6 +17,7 @@ import {
   UnexpectedClientError,
 } from "../models/errors/httpclienterrors.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
+import { APICall, APIPromise } from "../types/async.js";
 import { Result } from "../types/fp.js";
 
 /**
@@ -25,10 +26,10 @@ import { Result } from "../types/fp.js";
  * @remarks
  * Root endpoint, returns a friendly greeting.
  */
-export async function generalReadRootGet(
+export function generalReadRootGet(
   client: HolidayCore,
   options?: RequestOptions,
-): Promise<
+): APIPromise<
   Result<
     any,
     | APIError
@@ -40,6 +41,30 @@ export async function generalReadRootGet(
     | ConnectionError
   >
 > {
+  return new APIPromise($do(
+    client,
+    options,
+  ));
+}
+
+async function $do(
+  client: HolidayCore,
+  options?: RequestOptions,
+): Promise<
+  [
+    Result<
+      any,
+      | APIError
+      | SDKValidationError
+      | UnexpectedClientError
+      | InvalidRequestError
+      | RequestAbortedError
+      | RequestTimeoutError
+      | ConnectionError
+    >,
+    APICall,
+  ]
+> {
   const path = pathToFunc("/")();
 
   const headers = new Headers(compactMap({
@@ -47,7 +72,7 @@ export async function generalReadRootGet(
   }));
 
   const context = {
-    baseURL: options?.serverURL ?? "",
+    baseURL: options?.serverURL ?? client._baseURL ?? "",
     operationID: "read_root__get",
     oAuth2Scopes: [],
 
@@ -68,7 +93,7 @@ export async function generalReadRootGet(
     timeoutMs: options?.timeoutMs || client._options.timeoutMs || -1,
   }, options);
   if (!requestRes.ok) {
-    return requestRes;
+    return [requestRes, { status: "invalid" }];
   }
   const req = requestRes.value;
 
@@ -79,7 +104,7 @@ export async function generalReadRootGet(
     retryCodes: context.retryCodes,
   });
   if (!doResult.ok) {
-    return doResult;
+    return [doResult, { status: "request-error", request: req }];
   }
   const response = doResult.value;
 
@@ -98,8 +123,8 @@ export async function generalReadRootGet(
     M.fail("5XX"),
   )(response);
   if (!result.ok) {
-    return result;
+    return [result, { status: "complete", request: req, response }];
   }
 
-  return result;
+  return [result, { status: "complete", request: req, response }];
 }
