@@ -21,6 +21,7 @@ import {
 import * as errors from "../models/errors/index.js";
 import { SDKValidationError } from "../models/errors/sdkvalidationerror.js";
 import * as operations from "../models/operations/index.js";
+import { APICall, APIPromise } from "../types/async.js";
 import { Result } from "../types/fp.js";
 
 /**
@@ -29,11 +30,11 @@ import { Result } from "../types/fp.js";
  * @remarks
  * Remove a holiday destination from the database by its ID.
  */
-export async function destinationsDeleteDestinationDestinationsDestinationIdDelete(
+export function destinationsDeleteDestinationDestinationsDestinationIdDelete(
   client: HolidayCore,
   request: operations.DeleteDestinationDestinationsDestinationIdDeleteRequest,
   options?: RequestOptions,
-): Promise<
+): APIPromise<
   Result<
     void,
     | errors.HTTPValidationError
@@ -46,6 +47,33 @@ export async function destinationsDeleteDestinationDestinationsDestinationIdDele
     | ConnectionError
   >
 > {
+  return new APIPromise($do(
+    client,
+    request,
+    options,
+  ));
+}
+
+async function $do(
+  client: HolidayCore,
+  request: operations.DeleteDestinationDestinationsDestinationIdDeleteRequest,
+  options?: RequestOptions,
+): Promise<
+  [
+    Result<
+      void,
+      | errors.HTTPValidationError
+      | APIError
+      | SDKValidationError
+      | UnexpectedClientError
+      | InvalidRequestError
+      | RequestAbortedError
+      | RequestTimeoutError
+      | ConnectionError
+    >,
+    APICall,
+  ]
+> {
   const parsed = safeParse(
     request,
     (value) =>
@@ -55,7 +83,7 @@ export async function destinationsDeleteDestinationDestinationsDestinationIdDele
     "Input validation failed",
   );
   if (!parsed.ok) {
-    return parsed;
+    return [parsed, { status: "invalid" }];
   }
   const payload = parsed.value;
   const body = null;
@@ -74,7 +102,7 @@ export async function destinationsDeleteDestinationDestinationsDestinationIdDele
   }));
 
   const context = {
-    baseURL: options?.serverURL ?? "",
+    baseURL: options?.serverURL ?? client._baseURL ?? "",
     operationID: "delete_destination_destinations__destination_id__delete",
     oAuth2Scopes: [],
 
@@ -96,7 +124,7 @@ export async function destinationsDeleteDestinationDestinationsDestinationIdDele
     timeoutMs: options?.timeoutMs || client._options.timeoutMs || -1,
   }, options);
   if (!requestRes.ok) {
-    return requestRes;
+    return [requestRes, { status: "invalid" }];
   }
   const req = requestRes.value;
 
@@ -107,7 +135,7 @@ export async function destinationsDeleteDestinationDestinationsDestinationIdDele
     retryCodes: context.retryCodes,
   });
   if (!doResult.ok) {
-    return doResult;
+    return [doResult, { status: "request-error", request: req }];
   }
   const response = doResult.value;
 
@@ -132,8 +160,8 @@ export async function destinationsDeleteDestinationDestinationsDestinationIdDele
     M.fail("5XX"),
   )(response, { extraFields: responseFields });
   if (!result.ok) {
-    return result;
+    return [result, { status: "complete", request: req, response }];
   }
 
-  return result;
+  return [result, { status: "complete", request: req, response }];
 }
